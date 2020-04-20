@@ -1,7 +1,6 @@
 ---
-- hosts: localhost
+- hosts: all
   tasks:
-  - meta: refresh_inventory 
   - name: create key pair using provided key_material
     ec2_key:
       name: bastion_host 
