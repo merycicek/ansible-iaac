@@ -1,6 +1,7 @@
 ---
 - hosts: localhost
   tasks:
+  - meta: refresh_inventory 
   - name: create key pair using provided key_material
     ec2_key:
       name: bastion_host 
@@ -8,4 +9,4 @@
       state: present
       # some changes
       key_material: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDeGIv69CP+VXL4cR3CuT4HGabwqio0AjVI6jR3hY/zgiXARxWNwT29wXSWAIWHJloc6dgwjsXBiaJdoyBXNvQVeBY7R9l3Z/h3A28oqp1If3phokKmcUgP15UlJpdAdy4Kvy1OG7kRNxeG1pf/l5ss0Yrway6QCb+DNILjdKspZStMChC8srSlcQ3JfgRlQYVhJcUdP51R+4bFUgBHAgYRxyQDhlD7I++ZGOi28cFoqgRVRH5YfTo6sRh+iMSJ4PLFojU0N7q2gcuqA1xZdLN2sOELaF+Rdcwl/AiI0SUomeuNzgDI+8EqGO/osa1Qq36tFG1zprlzlJjoNxbmUc8B centos@ip-172-31-21-173.eu-west-2.compute.internal'
-  - meta: refresh_inventory    
+     
